@@ -1,0 +1,8 @@
+n,n_pairs,shots,timing_repetitions,pair_weight_ms_median,classical_fusion_ms_median,total_sampled_ms_median,total_sampled_ms_mean,total_sampled_ms_stdev,quantum_simulation_ms_median,ms_per_pair,circuit_depth_logical,circuit_cx_logical,circuit_depth_linear,circuit_cx_linear,circuit_depth_ring,circuit_cx_ring,circuit_depth_grid,circuit_cx_grid,circuit_depth_heavy_hex,circuit_cx_heavy_hex,circuit_qubits,circuit_x,circuit_ccx,circuit_prep_u,circuit_measure,circuit_depth_logical_block,circuit_depth_full
+2,1,20000,5,0.0008,0.003,58.1,58.2,0.4,58.1,58.1,31,36,61,87,46,66,51,57,71,69,10,15,6,4,2,7,9
+3,3,20000,5,0.0008,0.004,182.6,181.3,2.5,182.6,60.9,31,36,61,87,46,66,51,57,71,69,10,15,6,4,2,7,9
+4,6,20000,5,0.0011,0.007,353.0,355.8,6.8,353.0,58.8,31,36,61,87,46,66,51,57,71,69,10,15,6,4,2,7,9
+5,10,20000,5,0.0015,0.010,588.5,587.9,5.1,588.5,58.8,31,36,61,87,46,66,51,57,71,69,10,15,6,4,2,7,9
+8,28,20000,5,0.0030,0.024,1620.7,1622.7,13.5,1620.7,57.9,31,36,61,87,46,66,51,57,71,69,10,15,6,4,2,7,9
+10,45,20000,5,0.0044,0.038,2601.4,2602.4,8.5,2601.4,57.8,31,36,61,87,46,66,51,57,71,69,10,15,6,4,2,7,9
+12,66,20000,5,0.0060,0.055,3827.7,3855.6,62.9,3827.6,58.0,31,36,61,87,46,66,51,57,71,69,10,15,6,4,2,7,9

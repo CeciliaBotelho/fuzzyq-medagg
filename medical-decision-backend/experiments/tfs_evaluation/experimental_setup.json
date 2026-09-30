@@ -1,0 +1,121 @@
+{
+  "environment": {
+    "python": "3.11.5",
+    "python_implementation": "CPython",
+    "qiskit": "2.2.3",
+    "qiskit_aer": "0.17.2",
+    "numpy": "2.4.6",
+    "fastapi": "0.122.0",
+    "pydantic": "2.12.5",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "cpu_count": 10,
+    "backend": "qasm_simulator"
+  },
+  "backend": {
+    "name": "qasm_simulator",
+    "class": "QasmSimulator",
+    "simulator": true,
+    "method": "None (None means automatic)",
+    "coupling_map": null,
+    "max_qubits": 30,
+    "n_basis_gates": 78,
+    "primitives_used": "backend.run (no Sampler/AerSampler primitive)",
+    "transpile_call": "transpile(qc, backend)",
+    "transpile_optimization_level": "default (not set explicitly)",
+    "transpile_basis_gates": "backend defaults (not set explicitly)",
+    "transpile_coupling_map": "backend defaults (None for qasm_simulator)",
+    "seed_application": "seed_simulator on backend.run, one derived seed per pair"
+  },
+  "circuit": {
+    "qubits_total": 10,
+    "qubits_input": 4,
+    "qubits_ancilla": 4,
+    "qubits_output": 2,
+    "clbits": 2,
+    "state_preparation_gates": {
+      "u": 4
+    },
+    "logical_xnor_gates": {
+      "x": 15,
+      "ccx": 6
+    },
+    "measurement_gates": 2,
+    "total_operations": 27,
+    "depth_logical_block_only": 7,
+    "depth_full_circuit": 9,
+    "transpiled_ops": {
+      "x": 11,
+      "ccx": 6,
+      "u3": 4,
+      "measure": 2
+    },
+    "transpiled_depth": 8,
+    "stages": [
+      {
+        "stage": "T1",
+        "n_ops": 2
+      },
+      {
+        "stage": "T2",
+        "n_ops": 1
+      },
+      {
+        "stage": "T3",
+        "n_ops": 5
+      },
+      {
+        "stage": "T4",
+        "n_ops": 1
+      },
+      {
+        "stage": "T5",
+        "n_ops": 3
+      },
+      {
+        "stage": "T6",
+        "n_ops": 1
+      },
+      {
+        "stage": "T7",
+        "n_ops": 1
+      },
+      {
+        "stage": "T8",
+        "n_ops": 1
+      },
+      {
+        "stage": "T9",
+        "n_ops": 2
+      },
+      {
+        "stage": "T10",
+        "n_ops": 1
+      },
+      {
+        "stage": "T11",
+        "n_ops": 3
+      }
+    ],
+    "n_prep_ops": 4,
+    "n_measure_ops": 2
+  },
+  "protocol": {
+    "production_default_shots": 20000,
+    "shot_budgets_evaluated": [
+      2000,
+      8000,
+      32000
+    ],
+    "seeds": {
+      "analytical_vs_circuit": 20260901,
+      "coverage": 70000,
+      "multi_source": 4242,
+      "runtime": 909,
+      "opinion_sampling": 13337
+    },
+    "grid_step_properties": 0.05,
+    "grid_step_closure": 0.02,
+    "seed_derivation": "numpy.random.SeedSequence(base).spawn(P), reduced mod 2**31-1"
+  }
+}

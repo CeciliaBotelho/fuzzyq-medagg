@@ -1,0 +1,16 @@
+# FuzzyQ-MedAgg -- backend and experimental evaluation
+# Python 3.11+
+
+# REST service
+fastapi>=0.115,<1.0
+uvicorn[standard]>=0.30,<1.0
+pydantic>=2.7,<3.0
+
+# QIF-XNOR Engine and the experimental evaluation
+qiskit>=2.0,<3.0
+qiskit-aer>=0.15,<1.0
+numpy>=1.26
+
+# Optional. The 68 tests in tests/ run standalone with plain python3;
+# pytest only provides nicer reporting.
+# pytest>=8.0

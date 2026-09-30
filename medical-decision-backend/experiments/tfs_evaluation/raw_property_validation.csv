@@ -1,0 +1,13 @@
+property,domain,n_inputs,n_pairs,violations,max_abs_error,tolerance,verdict
+D_I1 boundary,4 extreme combinations,2,4,0,0.000e+00,1.0e-12,pass
+D_I2 symmetry,grid step 0.05,231,53361,0,0.000e+00,1.0e-12,pass
+D_I3 identity,grid step 0.02,1326,1326,0,1.110e-16,1.0e-12,pass
+closure mu >= 0 and nu >= 0,grid step 0.02,1326,1758276,0,0.000e+00,1.0e-12,pass
+closure mu+nu <= 1,grid step 0.02,1326,1758276,0,2.220e-16,1.0e-09,pass
+multi-source closure n=2,200 random valid opinion sets,2,1,0,0.000e+00,1.0e-09,pass
+multi-source closure n=3,200 random valid opinion sets,3,3,0,0.000e+00,1.0e-09,pass
+multi-source closure n=4,200 random valid opinion sets,4,6,0,0.000e+00,1.0e-09,pass
+multi-source closure n=5,200 random valid opinion sets,5,10,0,0.000e+00,1.0e-09,pass
+multi-source closure n=8,200 random valid opinion sets,8,28,0,0.000e+00,1.0e-09,pass
+multi-source closure n=10,200 random valid opinion sets,10,45,0,0.000e+00,1.0e-09,pass
+multi-source closure n=12,200 random valid opinion sets,12,66,0,0.000e+00,1.0e-09,pass

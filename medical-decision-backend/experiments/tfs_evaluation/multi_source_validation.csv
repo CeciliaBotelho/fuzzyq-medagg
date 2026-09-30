@@ -1,0 +1,25 @@
+block,item,n,detail,value,verdict
+A pair count,P generated,2,vs n(n-1)/2,1,pass
+A pair count,P generated,3,vs n(n-1)/2,3,pass
+A pair count,P generated,4,vs n(n-1)/2,6,pass
+A pair count,P generated,5,vs n(n-1)/2,10,pass
+A pair count,P generated,8,vs n(n-1)/2,28,pass
+A pair count,P generated,10,vs n(n-1)/2,45,pass
+A pair count,P generated,12,vs n(n-1)/2,66,pass
+B n=2 reduction,w_12,2,uniform weighting,1.0,pass
+B n=2 reduction,analytical C == a_12,2,15 pairs from POOL,0.000e+00,pass
+B n=2 reduction,sampled C == run_xnor,2,"shots=200000, derived seed 993336185",True,pass
+C permutation,analytical invariance,3,6 permutations,0.000e+00,pass
+C permutation,analytical invariance,4,24 permutations,5.551e-17,pass
+C permutation,analytical invariance,5,120 permutations,1.110e-16,pass
+C permutation,sampled spread (distinct seeds),4,"24 permutations, shots=32000",0.00330,informational
+D weights,uniform,5,sum and non-negativity,1.000000000000000,pass
+D weights,weighted,5,sum and non-negativity,1.000000000000000,pass
+D weights,hierarchical,5,sum and non-negativity,1.000000000000000,pass
+E hierarchical,source weights balanced per institution,32,sum omega = 1/K for each institution,1/K exactly,pass
+E hierarchical,effective aggregate share NOT equal,32,A vs B under hierarchical,0.567308 vs 0.432692,informational
+F decision layer,scores non-negative,2..8,750 random consensuses,0,pass
+F decision layer,scores sum to 1,2..8,750 random consensuses,1.110e-16,pass
+F decision layer,example -> TREAT,2,"(0.821,0.146) (0.662,0.083)",treat=0.4837 noTreat=0.1109 exams=0.4054,informational
+F decision layer,example -> DO_NOT_TREAT,2,"(0.178,0.787) (0.239,0.744)",treat=0.1464 noTreat=0.5151 exams=0.3385,informational
+F decision layer,example -> REQUEST_EXAMS,2,"(0.531,0.092) (0.420,0.120)",treat=0.1903 noTreat=0.0876 exams=0.7222,informational

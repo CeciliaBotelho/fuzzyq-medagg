@@ -1,0 +1,6 @@
+institution,n_sources,omega_i,sum_omega_institution,intra_pair_weight_hierarchical,intra_pair_weight_uniform,effective_share_hierarchical,effective_share_uniform
+Institution A,30,0.016667,0.500000,0.278846,0.877016,0.567308,0.937500
+Institution B,2,0.250000,0.500000,0.144231,0.002016,0.432692,0.062500
+cross-institution pairs,,,,0.576923,0.120968,,
+consensus (uniform),32,,,mu=0.710947,nu=0.197763,pi=0.091290,TREAT
+consensus (hierarchical),32,,,mu=0.413883,nu=0.495124,pi=0.090994,REQUEST_EXAMS

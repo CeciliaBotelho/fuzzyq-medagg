@@ -42,9 +42,13 @@ conflict among multiple AI predictions.
 With the product t-norm $T_P(a,b) = ab$ and the probabilistic sum
 $S_P(a,b) = a + b - ab$:
 
-$$\mu_{\boxplus_{I_P}} = T_P\big(S_P(x_2,y_1),\, S_P(x_1,y_2)\big)
-\qquad
-\nu_{\boxplus_{I_P}} = S_P\big(T_P(x_1,y_2),\, T_P(x_2,y_1)\big)$$
+$$
+\mu_{\boxplus_{I_P}} = T_P\big(S_P(x_2,y_1),\; S_P(x_1,y_2)\big)
+$$
+
+$$
+\nu_{\boxplus_{I_P}} = S_P\big(T_P(x_1,y_2),\; T_P(x_2,y_1)\big)
+$$
 
 The XNOR is the dual of the XOR under the intuitionistic negation
 $N_{I_S}(x_1,x_2) = (x_2,x_1)$, which transposes components. It is not the
@@ -71,8 +75,11 @@ Width and depth are fixed and do not depend on the number of sources.
 $\boxplus_{I_P}$ is a binary equivalence and is non-associative, so no fold is
 available. Agreement is formed from the $P = \binom{n}{2}$ pairs:
 
-$$\tilde{C} = \Big(\textstyle\sum_{i<j} w_{ij}\,\mu_{ij},\;
-\sum_{i<j} w_{ij}\,\nu_{ij}\Big), \qquad \textstyle\sum_{i<j} w_{ij} = 1$$
+$$
+\tilde{C} = \left( \sum_{i \lt j} w_{ij}\, \mu_{ij}, \;
+\sum_{i \lt j} w_{ij}\, \nu_{ij} \right)
+\qquad \text{with} \qquad \sum_{i \lt j} w_{ij} = 1
+$$
 
 A convex combination of points of the convex set $\tilde{U}$ remains in
 $\tilde{U}$, so $\pi_C \geq 0$ requires no truncation. The weights depend only
@@ -93,9 +100,13 @@ already partition the unit. The score $s(\tilde{E}) = \mu_E - \nu_E$, the same
 function used in the Xu-Yager ordering, supplies the direction of the mean
 evidence:
 
-$$\text{treat} = \mu_C\tfrac{1+s}{2}
-\qquad \text{doNotTreat} = \mu_C\tfrac{1-s}{2}
-\qquad \text{requestExams} = \nu_C + \pi_C$$
+$$
+\text{treat} = \mu_C \frac{1+s}{2}
+\qquad
+\text{doNotTreat} = \mu_C \frac{1-s}{2}
+\qquad
+\text{requestExams} = \nu_C + \pi_C
+$$
 
 These sum to 1 by construction. The mapping is the decision layer of the
 framework and is not a consequence of the Xu-Yager ordering.

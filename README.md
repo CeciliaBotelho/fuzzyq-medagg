@@ -25,10 +25,10 @@ away, so the output cannot distinguish "both sources are unsure" from "the
 sources contradict each other".
 
 FuzzyQ-MedAgg keeps the two apart. Each source reports an Atanassov
-intuitionistic fuzzy value $\tilde{x} = (\mu, \nu)$: belief for, belief
-against, and the hesitation $\pi = 1 - \mu - \nu$ left over. Agreement between
+intuitionistic fuzzy value x̃ = (μ, ν): belief for, belief
+against, and the hesitation π = 1 − μ − ν left over. Agreement between
 two sources is measured by an intuitionistic fuzzy XNOR evaluated on a quantum
-circuit, and the aggregate of $n$ sources is mapped onto one of three clinical
+circuit, and the aggregate of n sources is mapped onto one of three clinical
 actions: treat, do not treat, or request further examinations.
 
 Diagnostic responsibility remains with the human specialist. The framework
@@ -39,8 +39,8 @@ conflict among multiple AI predictions.
 
 ### Agreement operator
 
-With the product t-norm $T_P(a,b) = ab$ and the probabilistic sum
-$S_P(a,b) = a + b - ab$:
+With the product t-norm T_P(a,b) = ab and the probabilistic sum
+S_P(a,b) = a + b − ab:
 
 $$
 \mu_{\boxplus_{I_P}} = T_P\big(S_P(x_2,y_1),\; S_P(x_1,y_2)\big)
@@ -51,14 +51,14 @@ $$
 $$
 
 The XNOR is the dual of the XOR under the intuitionistic negation
-$N_{I_S}(x_1,x_2) = (x_2,x_1)$, which transposes components. It is not the
-fuzzy negation $1-x$: that pair would leave $\tilde{U}$, violating
-$\mu + \nu \leq 1$, and would break the identity axiom $D_I3$.
+N_IS(x₁,x₂) = (x₂,x₁), which transposes components. It is not the
+fuzzy negation 1 − x: that pair would leave Ũ, violating
+μ + ν ≤ 1, and would break the identity axiom D_I3.
 
 ### Quantum circuit
 
-Stages $T_1$ to $T_{11}$ reproduce the manuscript figure gate for gate.
-Amplitude encoding precedes $T_1$ and measurement follows $T_{11}$; neither
+Stages T₁ to T₁₁ reproduce the manuscript figure gate for gate.
+Amplitude encoding precedes T₁ and measurement follows T₁₁; neither
 belongs to the figure.
 
 | Property | Value |
@@ -66,14 +66,14 @@ belongs to the figure.
 | Qubits | 10 (4 input, 4 ancilla, 2 output) |
 | Logical gates | 15 Pauli-X, 6 Toffoli |
 | Depth | 7 for the logical block, 9 for the full circuit |
-| Outputs | $q_8 = \mu_{\boxplus_{I_P}}$, $q_9 = \nu_{\boxplus_{I_P}}$ |
+| Outputs | q₈ = μ_⊞, q₉ = ν_⊞ |
 
 Width and depth are fixed and do not depend on the number of sources.
 
 ### Aggregating n sources
 
-$\boxplus_{I_P}$ is a binary equivalence and is non-associative, so no fold is
-available. Agreement is formed from the $P = \binom{n}{2}$ pairs:
+⊞ is a binary equivalence and is non-associative, so no fold is
+available. Agreement is formed from the P = C(n,2) pairs:
 
 $$
 \tilde{C} = \left( \sum_{i \lt j} w_{ij}\, \mu_{ij}, \;
@@ -81,22 +81,22 @@ $$
 \qquad \text{with} \qquad \sum_{i \lt j} w_{ij} = 1
 $$
 
-A convex combination of points of the convex set $\tilde{U}$ remains in
-$\tilde{U}$, so $\pi_C \geq 0$ requires no truncation. The weights depend only
+A convex combination of points of the convex set Ũ remains in
+Ũ, so π_C ≥ 0 requires no truncation. The weights depend only
 on the unordered pair, which makes the result independent of presentation
-order. A single pipeline covers every $n \geq 2$; for $n = 2$ it reduces
-exactly to $\boxplus_{I_P}(\tilde{x}_1, \tilde{x}_2)$ with $w_{12} = 1$.
+order. A single pipeline covers every n ≥ 2; for n = 2 it reduces
+exactly to ⊞(x̃₁, x̃₂) with w₁₂ = 1.
 
 Three weighting schemes are available. The uniform scheme sets
-$w_{ij} = 1/P$. The weighted scheme uses per-source weights. The hierarchical
-scheme sets $\omega_i = 1/(K n_k)$, balancing the source weights across the
-$K$ institutions before the pair weights are induced; this attenuates the
+w_ij = 1/P. The weighted scheme uses per-source weights. The hierarchical
+scheme sets ω_i = 1/(K n_k), balancing the source weights across the
+K institutions before the pair weights are induced; this attenuates the
 dominance of a larger site without making the final contributions equal.
 
 ### From degrees to a clinical action
 
-Proposition 2 gives $\mu_C + \nu_C + \pi_C = 1$ exactly, so the three degrees
-already partition the unit. The score $s(\tilde{E}) = \mu_E - \nu_E$, the same
+Proposition 2 gives μ_C + ν_C + π_C = 1 exactly, so the three degrees
+already partition the unit. The score s(Ẽ) = μ_E − ν_E, the same
 function used in the Xu-Yager ordering, supplies the direction of the mean
 evidence:
 
@@ -202,7 +202,7 @@ python3 run_all.py            # E1 through E6, about seven minutes
 | Manuscript experiment | Script | Output |
 | --- | --- | --- |
 | Setup and circuit resources | `e1_setup.py` | `experimental_setup.json` |
-| XNOR validation: $D_I1$, $D_I2$, $D_I3$, closure | `e2_properties.py` | `raw_property_validation.csv` |
+| XNOR validation: D_I1, D_I2, D_I3, closure | `e2_properties.py` | `raw_property_validation.csv` |
 | Shot analysis: closed form against circuit | `e3_analytical_vs_circuit.py` | `analytical_vs_circuit.csv`, `shot_summary.csv` |
 | Finite-shot uncertainty: interval coverage | `e4_coverage.py` | `finite_shot_coverage.csv` and raw |
 | Multi-source, permutation, weighting, action layer | `e5_multisource.py` | `multi_source_validation.csv`, `weighting_example.csv` |
@@ -216,11 +216,11 @@ counts and tolerances, is documented in
 
 | Aspect | Result |
 | --- | --- |
-| Operator properties | No violation of $D_I1$, $D_I2$, $D_I3$ or closure over 1,758,276 pairs of $\tilde{U}$; largest deviation $2.2 \times 10^{-16}$ |
-| Circuit against closed form | Mean absolute error $1.8 \times 10^{-3}$ at 32,000 shots; $\sqrt{N}\cdot\text{MAE}$ remains within 0.29 to 0.32 across a sixteenfold range of $N$ |
+| Operator properties | No violation of D_I1, D_I2, D_I3 or closure over 1,758,276 pairs of Ũ; largest deviation 2.2 × 10⁻¹⁶ |
+| Circuit against closed form | Mean absolute error 1.8 × 10⁻³ at 32,000 shots; √N · MAE remains within 0.29 to 0.32 across a sixteenfold range of N |
 | Interval coverage | Mean 0.956 over 27 estimates from 1,800 repetitions, against a nominal 0.95 |
-| Aggregation | $P = \binom{n}{2}$ exactly; permutation invariance to $10^{-16}$; decision scores sum to 1 to $10^{-16}$ |
-| Scalability | About 58 ms per pair, constant from $n = 2$ to $n = 12$; classical fusion accounts for 0.0014% of the total |
+| Aggregation | P = C(n,2) exactly; permutation invariance to 10⁻¹⁶; decision scores sum to 1 to 10⁻¹⁶ |
+| Scalability | About 58 ms per pair, constant from n = 2 to n = 12; classical fusion accounts for 0.0014% of the total |
 
 ## Scope and limitations
 

@@ -34,7 +34,6 @@ build/
 .vscode/
 .idea/
 
-# Bancos locais
 *.sqlite3
 *.db
 
